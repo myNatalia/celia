@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navegación - Portal Principal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            animation: fadeInScale 0.8s ease-out;
+        }
+
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        h1 {
+            color: white;
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+            font-weight: 300;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            animation: slideDown 0.8s ease-out 0.2s both;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .buttons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .nav-button {
+            padding: 1rem 2rem;
+            background: linear-gradient(45deg, #ff6b6b, #ffa500);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            animation: slideUp 0.6s ease-out both;
+        }
+
+        .nav-button:nth-child(1) { animation-delay: 0.3s; }
+        .nav-button:nth-child(2) { animation-delay: 0.4s; }
+        .nav-button:nth-child(3) { animation-delay: 0.5s; }
+        .nav-button:nth-child(4) { animation-delay: 0.6s; }
+        .nav-button:nth-child(5) { animation-delay: 0.7s; }
+        .nav-button:nth-child(6) { animation-delay: 0.8s; }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .nav-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        .nav-button:hover::before {
+            left: 100%;
+        }
+
+        .nav-button:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 25px rgba(255, 107, 107, 0.6);
+        }
+
+        .nav-button:active {
+            transform: translateY(-1px) scale(1.02);
+        }
+
+        .nav-button.secondary {
+            background: linear-gradient(45deg, #4ecdc4, #44a08d);
+            box-shadow: 0 4px 15px rgba(78, 205, 196, 0.4);
+        }
+
+        .nav-button.secondary:hover {
+            box-shadow: 0 8px 25px rgba(78, 205, 196, 0.6);
+        }
+
+        .nav-button.tertiary {
+            background: linear-gradient(45deg, #a8edea, #fed6e3);
+            color: #333;
+            box-shadow: 0 4px 15px rgba(168, 237, 234, 0.4);
+        }
+
+        .nav-button.tertiary:hover {
+            box-shadow: 0 8px 25px rgba(168, 237, 234, 0.6);
+        }
+
+        .floating-particles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .particle {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) translateX(0) rotate(0deg); }
+            33% { transform: translateY(-30px) translateX(30px) rotate(120deg); }
+            66% { transform: translateY(-10px) translateX(-20px) rotate(240deg); }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 1rem;
+                padding: 1.5rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .buttons-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .nav-button {
+                padding: 0.8rem 1.5rem;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-particles">
+        <div class="particle" style="width: 10px; height: 10px; top: 20%; left: 10%; animation-delay: 0s;"></div>
+        <div class="particle" style="width: 15px; height: 15px; top: 60%; left: 85%; animation-delay: 2s;"></div>
+        <div class="particle" style="width: 8px; height: 8px; top: 80%; left: 20%; animation-delay: 4s;"></div>
+        <div class="particle" style="width: 12px; height: 12px; top: 30%; left: 70%; animation-delay: 1s;"></div>
+        <div class="particle" style="width: 6px; height: 6px; top: 50%; left: 50%; animation-delay: 3s;"></div>
+    </div>
+
+    <div class="container">
+        <h1>Portal de Navegación</h1>
+        <div class="buttons-grid">
+            <a href="area,treangulo.html" class="nav-button" target="_blank">
+                area del treangulo
+            </a>
+            <a href="areacirculo.html" class="nav-button secondary" target="_blank">
+                area del circulo
+            </a>
+            <a href="areadepentagono.html" class="nav-button" target="_blank">
+                area del pentágono
+            </a>
+            <a href="areatrapecio.html" class="nav-button secondary" target="_blank">
+                area del trapecio
+            </a>
+            <a href="Autobiografia.html" class="nav-button tertiary" target="_blank">
+                Autobiografia
+            </a>
+            <a href="calendario.html" class="nav-button" target="_blank">
+                calendario
+            </a>
+             <a href="calificacion.html" class="nav-button" target="_blank">
+                calificacion
+            </a>
+             <a href="edad.html" class="nav-button" target="_blank">
+                edad
+            </a>
+             <a href="Estructura.html" class="nav-button" target="_blank">
+                Estructura
+            </a>
+             <a href="Examen Practico.html" class="nav-button" target="_blank">
+                Examen Practico
+            </a>
+             <a href="index.html" class="nav-button" target="_blank">
+                index
+            </a>
+            <a href="indice.html" class="nav-button secondary" target="_blank">
+                indice
+            </a>
+            <a href="login.html" class="nav-button tertiary" target="_blank">
+                login
+            </a>
+            <a href="MatrizEvaluacion.html" class="nav-button" target="_blank">
+                Matriz de Evaluación
+            </a>
+            <a href="Promedio.html" class="nav-button secondary" target="_blank">
+                Promedio
+            </a>
+            <a href="salario.html" class="nav-button tertiary" target="_blank">
+                salario
+            </a>
+            <a href="Tablas.html" class="nav-button" target="_blank">
+                Tablas
+            </a>
+            <a href="vida saludable.html" class="nav-button secondary" target="_blank">
+                vida saludable
+            </a>
+            <a href="video.html" class="nav-button tertiary" target="_blank">
+                video
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Efecto de partículas adicionales
+        function createParticle() {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.width = Math.random() * 12 + 4 + 'px';
+            particle.style.height = particle.style.width;
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.top = Math.random() * 100 + '%';
+            particle.style.animationDelay = Math.random() * 6 + 's';
+            particle.style.animationDuration = (Math.random() * 4 + 4) + 's';
+            
+            document.querySelector('.floating-particles').appendChild(particle);
+            
+            setTimeout(() => {
+                particle.remove();
+            }, 8000);
+        }
+
+        // Crear partículas periódicamente
+        setInterval(createParticle, 2000);
+
+        // Efecto de hover mejorado para los botones
+        document.querySelectorAll('.nav-button').forEach(button => {
+            button.addEventListener('mouseenter', function() {
+                this.style.filter = 'brightness(1.1)';
+            });
+            
+            button.addEventListener('mouseleave', function() {
+                this.style.filter = 'brightness(1)';
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<html>
+<head>
+	<title>
+		Suma de dos numeros
+	</title>
+</head>
+<script>
+	function area(){
+		var b= parseInt(document.MyForm.txtBase.value);
+		var a= parseInt(document.MyForm.txtAltura.value);
+		
+		document.MyForm.txtResultado.value=(a*b)/2;
+	}
+</script>
+<style>
+        
+		 header {
+           
+            color: rgb(168, 223, 255);
+            padding: 10px;
+            text-align: center;
+            font-family: mistral, sans-serif;
+            width: 70%;
+        }
+         .interlineado {
+            /* 7. Interlineado */
+            line-height: 1.0;
+        }
+        table{
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table ,td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+        footer {
+            background-color: #ffbeef;
+            color: white;
+            text-align: center;
+            padding: 3px;
+            position: center;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+<body>
+	 <center><header>
+    <img src="Logo.jpg" width="700"><img src="cecytem.png" alt="Bienvenida" width="80" height="80">
+    </header></center>
+
+	<center><table width="1000" border="1">
+		<form name="MyForm">
+			<tr>
+				<td width="200" height="20"><label>dame la base</label></td>
+				<td width="200" height="20"><input type="text" name="txtBase"></td>
+				<td width="200" rowspan="4"><img src="triangulo.png" width="100" height="100"></td>
+			</tr>
+			<tr>
+				<td height="20"><label>dame la altura</td>
+				<td><input type="text" name="txtAltura"></td>
+			</tr>
+			<tr>
+				<td height="20"><label>mostrar area</td>
+				<td><input type="text" name="txtResultado"></td>
+			</tr>
+
+			<tr>
+				<td colspan="2" align="center"><input type="button" value="area" onclick="area()"></td>
+			</tr>
+				</form></table>
+	</center>
+	<center><footer>
+        <p>&copy; 2025 Mi Página Web-todos los derechos reservados</p> 
+        <p>&copy; 👍Mateo Jordi en facebook👍</p>
+        <p>&copy;👍 jrd_ntla en instagram👍</p>   
+    </footer></center>
+</body>
+
+</html>

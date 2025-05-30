@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            /* 9. Imagen de fondo en la página web */
+            background-image: url('fondo.gif');
+            background-repeat: repeat;
+        }
+        
+        .justificado {
+            /* 3. Justificar un párrafo */
+            text-align: justify;
+        }
+        
+        .interlineado {
+            /* 7. Interlineado */
+            line-height: 2.0;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+        
+        table, th, td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+        
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejemplos de Elementos HTML</h1>
+    
+    <h2>1. Viñetas (Listas no ordenadas)</h2>
+    <ul>
+        <li>Elemento de lista 1</li>
+        <li>Elemento de lista 2</li>
+        <li>Elemento de lista 3</li>
+    </ul>
+    
+    <h2>2. Numeración (Listas ordenadas)</h2>
+    <ol>
+        <li>Primer elemento</li>
+        <li>Segundo elemento</li>
+        <li>Tercer elemento</li>
+    </ol>
+    
+    <h2>3. Párrafo Justificado</h2>
+    <p class="justificado">Este es un ejemplo de texto justificado. El texto justificado se alinea tanto en el margen izquierdo como en el derecho, creando líneas rectas en ambos lados. Esto se utiliza comúnmente en periódicos, revistas y libros para crear un aspecto más organizado y formal. Para lograr este efecto, utilizamos la propiedad CSS text-align con el valor justify.</p>
+    
+    <h2>4. Texto Tachado</h2>
+    <p>Aquí hay un <del>texto tachado</del> utilizando la etiqueta &lt;del&gt;.</p>
+    
+    <h2>5. Índice</h2>
+    <p>Fórmula química: H<sub>2</sub>O (el "2" está en índice)</p>
+    
+    <h2>6. Superíndice</h2>
+    <p>Notación matemática: x<sup>2</sup> + y<sup>2</sup> = z<sup>2</sup> (los exponentes están en superíndice)</p>
+    
+    <h2>7. Texto con Interlineado</h2>
+    <p class="interlineado">Este párrafo tiene un interlineado aumentado.<br>
+    Como puedes ver, hay más espacio entre las líneas.<br>
+    Esto hace que el texto sea más fácil de leer cuando hay muchas líneas de contenido.</p>
+    
+    <h2>8. Insertar imagen GIF</h2>
+    <!-- La ruta debe apuntar a un archivo GIF real -->
+    <img src="ejemplo.gif" alt="Imagen GIF de ejemplo" width="200">
+    
+    <h2>10. Insertar Tabla</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Encabezado 1</th>
+                <th>Encabezado 2</th>
+                <th>Encabezado 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Fila 1, Celda 1</td>
+                <td>Fila 1, Celda 2</td>
+                <td>Fila 1, Celda 3</td>
+            </tr>
+            <tr>
+                <td>Fila 2, Celda 1</td>
+                <td>Fila 2, Celda 2</td>
+                <td>Fila 2, Celda 3</td>
+            </tr>
+            <tr>
+                <td>Fila 3, Celda 1</td>
+                <td>Fila 3, Celda 2</td>
+                <td>Fila 3, Celda 3</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

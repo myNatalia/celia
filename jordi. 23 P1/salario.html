@@ -1,0 +1,161 @@
+<html>
+<head>
+    <title>Salariooo</title>
+    <style>
+         header {
+           
+           color: rgb(168, 223, 255);
+           padding: 10px;
+           text-align: center;
+           font-family: mistral, sans-serif;
+           width: 70%;
+       }
+        .interlineado {
+           line-height: 1.0;
+       }
+       table{
+           border-collapse: collapse;
+           margin-top: 20px;
+       }
+       table ,td {
+           border: 1px solid black;
+           padding: 8px;
+       }
+       footer {
+           background-color: #ffbeef;
+           color: white;
+           text-align: center;
+           padding: 3px;
+           position: center;
+           width: 100%;
+           bottom: 0;
+       }
+    </style>
+    <script>
+        function calcularSalario() {
+    var PH = parseFloat(document.getElementById("txtPH").value);
+    var HT = parseFloat(document.getElementById("txtHT").value);
+    var DT = parseFloat(document.getElementById("txtDT").value);
+    var HE = parseFloat(document.getElementById("txtHE").value);
+    var SSSHE = PH * HT * DT;
+    var PHE = PH * 2;
+    var SSCHE = PHE * HE;
+    var SST = SSSHE + SSCHE;
+    var SSLI_temp = SST;
+    var SM = SSLI_temp * 4;
+    var porcentajeISR;
+    var mensaje;
+    
+    
+    if (SM < 1500) {
+        porcentajeISR = 0.18;
+        mensaje = "Su salario es menor a 1500 y se le aplicará un ISR del 18%";
+    } else {
+        porcentajeISR = 0.22;
+        mensaje = "Su salario es mayor a 1500 y se le aplicará un ISR del 22%";
+    }
+    var ISR = SST * porcentajeISR;
+    var SSLI = SST - ISR;
+    var SQ = SSLI * 2;
+    var SM = SSLI * 4;
+    
+    
+    document.getElementById("txtSSSHE").value = SSSHE.toFixed(2);
+    document.getElementById("txtPHE").value = PHE.toFixed(2);
+    document.getElementById("txtSSCHE").value = SSCHE.toFixed(2);
+    document.getElementById("txtISR").value = ISR.toFixed(2);
+    document.getElementById("txtSSLI").value = SSLI.toFixed(2);
+    document.getElementById("txtSQ").value = SQ.toFixed(2);
+    document.getElementById("txtSM").value = SM.toFixed(2);
+    document.getElementById("mensaje").value = mensaje;
+}
+        
+        
+        function limpiar() {
+
+            document.getElementById("txtPH").value = "";
+            document.getElementById("txtHT").value = "";
+            document.getElementById("txtDT").value = "";
+            document.getElementById("txtSSSHE").value = "";
+            document.getElementById("txtHE").value = "";
+            document.getElementById("txtPHE").value = "";
+            document.getElementById("txtSSCHE").value = "";
+            document.getElementById("txtISR").value = "";
+            document.getElementById("txtSSLI").value = "";
+            document.getElementById("txtSQ").value = "";
+            document.getElementById("txtSM").value = "";
+            document.getElementById("mensaje").value = "";
+        }
+    </script>
+</head>
+
+<body>
+    <center><header>
+        <img src="Logo.jpg" width="700"><img src="cecytem.png" alt="Bienvenida" width="80" height="80">
+        </header></center>
+    <center>
+        <table width="1000" border="1">
+            <form name="salario">
+            <tr>
+                <td><label>Pago x Hora</label></td>
+                <td><input type="text" id="txtPH"></td>
+            </tr>
+            <tr>
+                <td><label>Horas Trabajadas</label></td>
+                <td><input type="text" id="txtHT"></td>
+            </tr>
+            <tr>
+                <td><label>Dias Trabajados</label></td>
+                <td><input type="text" id="txtDT"></td>
+            </tr>
+            <tr>
+                <td><label>Salario Semanal SHE</label></td>
+                <td><input type="text" id="txtSSSHE" readonly></td>
+            </tr>
+            <tr>
+                <td><label>Horas Extras</label></td>
+                <td><input type="text" id="txtHE"></td>
+            </tr>
+            <tr>
+                <td><label>Pago Horas Extras</label></td>
+                <td><input type="text" id="txtPHE" readonly></td>
+            </tr>
+            <tr>
+                <td><label>Salario Semanal con Horas Extras</label></td>
+                <td><input type="text" id="txtSSCHE" readonly></td>
+            </tr>
+            <tr>
+                <td><label>ISR 22%</label></td>
+                <td><input type="text" id="txtISR" readonly></td>
+            </tr>
+            <tr>
+                <td><label>Salario Semanal Libre</label></td>
+                <td><input type="text" id="txtSSLI" readonly></td>
+            </tr>
+            <tr>
+                <td><label>Salario Quincenal</label></td>
+                <td><input type="text" id="txtSQ" readonly></td>
+            </tr>
+            <tr>
+                <td><label>Salario Mensual</label></td>
+                <td><input type="text" id="txtSM" readonly></td>
+            </tr>
+            <tr>
+                <td><label>18% or 22%</label></td>
+                <td><input type="text" size="60" id="mensaje" readonly></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="button" value="Calcular" onclick="calcularSalario()">
+                    <input type="button" value="Limpiar" onclick="limpiar()">
+                </td>
+            </tr>
+        </table>
+    </center>
+    <center><footer>
+        <p>&copy; 2025 Mi Página Web-todos los derechos reservados</p> 
+        <p>&copy; 👍Mateo Jordi en facebook👍</p>
+        <p>&copy;👍 jrd_ntla en instagram👍</p>   
+    </footer></center>
+</body>
+</html>

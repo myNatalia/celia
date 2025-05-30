@@ -1,0 +1,35 @@
+<html>
+<head>
+	<title>
+		Area de un circulo
+	</title>
+</head>
+<script>
+	function Area(){
+		var R= parseInt(document.formAc.txtRadio.value);
+		document.formAc.txtAcirculo.value=(3.1416*(R*R));
+	}
+</script>
+<center><table width="1000" border="1">
+    <form name="formAc">
+       
+        
+        <tr>
+            <td><label>ingresa el radio</td>
+            <td><input type="text" name="txtRadio"></td>
+        </tr>
+       
+        <tr>
+            <td ><label>el Promedio es:</td>
+            <td><input type="text" name="txtAcirculo"></td>
+        </tr>
+
+        <tr>
+            <td><input type="button" value="Area de un circulo" onclick="Area();"></td>
+        </tr>
+    </form></table>
+</center>
+
+</body>
+
+</html>

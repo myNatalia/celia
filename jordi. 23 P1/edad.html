@@ -1,0 +1,54 @@
+<html>
+<head>
+    <title>
+        Edad
+    </title>
+</head>
+<script>
+    function Edad(){
+        var nombre =( document.formEPersona.txtNombre.value);
+        var AN = parseInt(document.formEPersona.txtANacimiento.value);
+        var edad = parseInt(document.formEPersona.txtEdad.value);
+        document.formEPersona.txtEdad.value=2025-AN;
+        
+        if(edad >= 18){
+            document.formEPersona.txtMensaje.value = nombre + " es mayor de edad";
+        } else {
+            document.formEPersona.txtMensaje.value = nombre + " es menor de edad";
+        }
+    }
+    
+    function Limpiar(){
+        document.formEPersona.txtNombre.value = "";
+        document.formEPersona.txtANacimiento.value = "";
+        document.formEPersona.txtEdad.value = "";
+        document.formEPersona.txtMensaje.value = "";
+    }
+</script>
+<body>
+    <center><table width="1000" border="1">
+        <form name="formEPersona">
+        <tr>
+            <td><label>Nombre</label></td>
+            <td><input type="text" name="txtNombre"></td>
+        </tr>
+        <tr>
+            <td><label>Año nacimiento</label></td>
+            <td><input type="text" name="txtANacimiento"></td>
+        </tr>
+        <tr>
+            <td><label>Edad</label></td>
+            <td><input type="text" name="txtEdad"></td>
+        </tr>
+        <tr>
+            <td><label>Mensaje</label></td>
+            <td><input type="text" name="txtMensaje" readonly></td>
+        </tr>
+        <tr>
+            <td><input type="button" name="btnEdad" value="Calcular Edad" onclick="Edad()"></td>
+            <td><input type="button" name="btnLimpiar" value="Limpiar" onclick="Limpiar()"></td>
+        </tr>
+        </form>
+    </table></center>
+</body>
+</html>

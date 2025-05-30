@@ -1,0 +1,42 @@
+<html>
+<head>
+	<title>
+		Area de un petagono
+	</title>
+</head>
+<script>
+	function Petagono(){
+		var P= parseInt(document.formAPentagono.txtPerimetro.value);
+        var A= parseInt(document.formAPentagono.txtApotema.value);
+		document.formAPentagono.txtAPentagono.value=(P*A)/2;
+	}
+</script>
+
+    
+<center><table width="1000" border="1">
+    <form name="formAPentagono">
+       
+        
+        <tr>
+            <td><label>ingresa el perimetro</label></td>
+            <td><input type="text" name="txtPerimetro"></td>
+        </tr>
+        <tr>
+            <td><label>ingresa el apotema</label></td>
+            <td><input type="text" name="txtApotema"></td>
+        </tr>
+        
+        <tr>
+            <td ><label>el area es:</label></td>
+            <td><input type="text" name="txtAPentagono"></td>
+        </tr>
+
+        <tr>
+            <td><input type="button" name="area" value="area de un trapecio" onclick="Petagono()"></td>
+        </tr>
+    </form></table>
+</center>
+
+</body>
+
+</html>

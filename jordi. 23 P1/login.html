@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bienvenidos</title>
+    <style>
+        /* Estilos para el encabezado */
+        header {
+            background-color: #ffffff;
+            color: rgb(168, 223, 255);
+            padding: 10px;
+            text-align: center;
+            font-family: mistral, sans-serif;
+            width: 70%;
+        }
+
+        /* Estilos para el pie de página */
+        footer {
+            background-color: #f737c7;
+            color: white;
+            text-align: center;
+            padding: 3px;
+            position: center;
+            width: 70%;
+            bottom: 0;
+        }
+
+        /* Estilo de la tabla */
+        table {
+            width: 70%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        
+        
+
+        input[type="text"], input[type="password"] {
+            padding: 5px;
+            margin: 5px;
+        }
+
+       
+
+        /* Estilo para el reloj y la fecha */
+        #date-time {
+            font-family: 'Courier New', monospace;
+            font-size: 18px;
+            color: #333;
+            text-align: center;
+        }
+        
+        .calendar {
+            max-width: 800px;
+            width: 100%;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .calendar-header {
+            background-color: #4285f4;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+        }
+        
+        .month-navigation {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: #e0e0e0;
+        }
+        
+        .nav-btn {
+            background-color: #4285f4;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 8px 15px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        
+        .month-year {
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 35px;
+        }
+        
+        .weekdays {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            text-align: center;
+            font-weight: bold;
+            background-color: #f0f0f0;
+            padding: 10px 0;
+        }
+        
+        .calendar-days {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 2px;
+            padding: 10px;
+        }
+        
+        .day {
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+            min-height: 40px;
+        }
+        
+        .day:hover {
+            background-color: #e6e6e6;
+            cursor: pointer;
+        }
+        
+        .today {
+            background-color: #4285f4;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .other-month {
+            color: #cccccc;
+        }
+    </style>
+</head>
+<body>
+    <!-- Encabezado -->
+    <center><header>
+    <img src="Logo.jpg" width="700"><img src="cecytem.png" alt="Bienvenida" width="80" height="80">
+    </header></center>
+
+    <!-- Tabla de Información -->
+    <center><table>
+        <tr>
+            <td>
+                <div class="calendar">
+                    <div class="calendar-header">
+                        Calendar
+                    </div>
+                    <div class="month-navigation">
+                        <button class="nav-btn prev-month">←</button>
+                        <div class="month-year">March 2025</div>
+                        <button class="nav-btn next-month">→</button>
+                    </div>
+                    <div class="weekdays">
+                        <div>Sun</div>
+                        <div>Mon</div>
+                        <div>Tue</div>
+                        <div>Wed</div>
+                        <div>Thu</div>
+                        <div>Fri</div>
+                        <div>Sat</div>
+                    </div>
+                    <div class="calendar-days">
+                        <div class="day other-month">23</div>
+                        <div class="day other-month">24</div>
+                        <div class="day other-month">25</div>
+                        <div class="day other-month">26</div>
+                        <div class="day other-month">27</div>
+                        <div class="day other-month">28</div>
+                        <div class="day">1</div>
+                        <div class="day">2</div>
+                        <div class="day">3</div>
+                        <div class="day">4</div>
+                        <div class="day">5</div>
+                        <div class="day">6</div>
+                        <div class="day">7</div>
+                        <div class="day">8</div>
+                        <div class="day">9</div>
+                        <div class="day">10</div>
+                        <div class="day">11</div>
+                        <div class="day">12</div>
+                        <div class="day">13</div>
+                        <div class="day today">14</div>
+                        <div class="day">15</div>
+                        <div class="day">16</div>
+                        <div class="day">17</div>
+                        <div class="day">18</div>
+                        <div class="day">19</div>
+                        <div class="day">20</div>
+                        <div class="day">21</div>
+                        <div class="day">22</div>
+                        <div class="day">23</div>
+                        <div class="day">24</div>
+                        <div class="day">25</div>
+                        <div class="day">26</div>
+                        <div class="day">27</div>
+                        <div class="day">28</div>
+                        <div class="day">29</div>
+                        <div class="day">30</div>
+                        <div class="day">31</div>
+                        <div class="day other-month">1</div>
+                        <div class="day other-month">2</div>
+                        <div class="day other-month">3</div>
+                        <div class="day other-month">4</div>
+                        <div class="day other-month">5</div>
+                    </div>
+                </div>
+            </td>
+            
+            <td><h1><font face="tahoma" color="#1f2525" size="5">Colegio de Estudios Científicos y Tecnológicos del Estado de México</font></h1>
+                <p><font face="tahoma" color ="black" size="2">Módulo 3. Desarrolla páginas web</font></p>
+                <p><font face="tahoma" color="black" size="2">Sub módulo II: Desarrolla aplicaciones que se ejecutan en el cliente</font></p>
+                <p><font face="tahoma" color="black" size="2">Sub módulo I: Desarrolla aplicaciones que se ejecutan en el servidor</font></p>
+                <p><font face="tahoma" color="black" size="2">Alumno: Jordi Mateo Octaviano</font></p>
+                <p><font face="tahoma" color="black" size="2">Docente: Celia Romero Pichardo</font></p>
+                <p><font face="tahoma" color ="black" size="2">Carrera: Técnico en Programación</font></p></td>
+                <td>
+                    <form id="loginForm">
+                        <label for="username" onfocus=this.value>usuario</label></br>
+                        <input type="text" id="username" name="username"><br>
+                        <label for="password" onfocus=this.value>contraseña</label></br>
+                        <input type="password" id="password" name="password"><br></br>
+                        <button type="submit">iniciar Sesión</button>
+                        <input type="reset" value="limpiar" onclick=username password()>
+                        </form>
+                </td>
+        </tr>
+    </table></center>
+
+    <!-- Mostrar hora y fecha actual -->
+    <div id="date-time"></div>
+
+    <!-- Pie de página -->
+    <center><footer>
+        <p>&copy; 2025 Mi Página Web- todos los derechos reservados
+        <p>&copy; 👍Mateo Jordi en facebook👍</p>
+        <p>&copy;👍 jrd_ntla en instagram👍</p>
+        </p>
+    </footer></center>
+
+    <script>
+        // Script para mostrar la fecha y hora actual
+        function updateDateTime() {
+            const now = new Date();
+            const options = { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit', weekday: 'long' };
+            document.getElementById('date-time').innerHTML = now.toLocaleString('es-ES', options);
+        }
+
+        // Actualizar la fecha y hora cada segundo
+        setInterval(updateDateTime, 1000);
+    </script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.js"></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.css">
+    
+
+     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get navigation buttons
+            const prevButton = document.querySelector('.prev-month');
+            const nextButton = document.querySelector('.next-month');
+            const monthYearDisplay = document.querySelector('.month-year');
+            
+            // Current date values
+            let currentDate = new Date();
+            let currentMonth = currentDate.getMonth();
+            let currentYear = currentDate.getFullYear();
+            
+            // Update calendar
+            function updateCalendar() {
+                // Update month-year display
+                const monthNames = ["January", "February", "March", "April", "May", "June",
+                    "July", "August", "September", "October", "November", "December"];
+                monthYearDisplay.textContent = `${monthNames[currentMonth]} ${currentYear}`;
+                
+                // Clear existing days
+                const calendarDays = document.querySelector('.calendar-days');
+                calendarDays.innerHTML = '';
+                
+                // Get first day of month and number of days
+                const firstDay = new Date(currentYear, currentMonth, 1).getDay();
+                const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+                
+                // Get days from previous month
+                const prevMonthDays = new Date(currentYear, currentMonth, 0).getDate();
+                
+                // Add previous month days
+                for (let i = firstDay - 1; i >= 0; i--) {
+                    const dayElement = document.createElement('div');
+                    dayElement.classList.add('day', 'other-month');
+                    dayElement.textContent = prevMonthDays - i;
+                    calendarDays.appendChild(dayElement);
+                }
+                
+                // Add current month days
+                const today = new Date();
+                const isCurrentMonth = today.getMonth() === currentMonth && today.getFullYear() === currentYear;
+                
+                for (let i = 1; i <= daysInMonth; i++) {
+                    const dayElement = document.createElement('div');
+                    dayElement.classList.add('day');
+                    dayElement.textContent = i;
+                    
+                    // Highlight today
+                    if (isCurrentMonth && i === today.getDate()) {
+                        dayElement.classList.add('today');
+                    }
+                    
+                    calendarDays.appendChild(dayElement);
+                }
+                
+                // Add next month days
+                const totalCells = 42; // 6 rows of 7 days
+                const remainingCells = totalCells - (firstDay + daysInMonth);
+                
+                for (let i = 1; i <= remainingCells; i++) {
+                    const dayElement = document.createElement('div');
+                    dayElement.classList.add('day', 'other-month');
+                    dayElement.textContent = i;
+                    calendarDays.appendChild(dayElement);
+                }
+            }
+            
+            // Navigate to previous month
+            prevButton.addEventListener('click', function() {
+                currentMonth--;
+                if (currentMonth < 0) {
+                    currentMonth = 11;
+                    currentYear--;
+                }
+                updateCalendar();
+            });
+            
+            // Navigate to next month
+            nextButton.addEventListener('click', function() {
+                currentMonth++;
+                if (currentMonth > 11) {
+                    currentMonth = 0;
+                    currentYear++;
+                }
+                updateCalendar();
+            });
+            
+            // Initialize calendar
+            updateCalendar();
+        });
+    </script>
+     
+</body>
+</html>

@@ -1,0 +1,70 @@
+<html>
+<head>
+	<title>
+		Promedio de un estudiante
+	</title>
+</head>
+<script>
+    function Promedio(){
+		var C1= parseFloat(document.calificaciones.txtc1.value);
+		var C2= parseFloat(document.calificaciones.txtc2.value);
+        var C3= parseFloat(document.calificaciones.txtc3.value);
+		var S= C1+C2+C3;
+        var P= S/3;
+        var mensaje="";
+    	
+		
+        if(P >= 6.0){
+            mensaje ="usted aprobo con un promedio de" + P.toFixed(2);
+        } else {
+            mensaje ="usted reprobo con un promedio de" +P.toFixed(2);
+        }
+        document.calificaciones.txtPromedio.value= P;
+        document.calificaciones.txtSuma.value= S;
+        document.calificaciones.txtMensaje.value= mensaje;
+
+	}
+</script>
+
+<body>
+	
+
+   
+       
+
+	<center><table width="1000" border="1">
+		<form name="calificaciones">
+			<tr>
+				<td height="20" colspan="2">dame la calificacion de modulo|||</td>
+				<td><input type="text" name="txtc1"></td>
+			</tr>
+            <tr>
+				<td width="200" height="20" colspan="2">dame la calificacion de submodulo||:desarrolla paginas web que se ejecutan en el servidor</label></td>
+				<td width="200" height="20"><input type="text" name="txtc2"></td>
+			</tr>
+            <tr>
+				<td height="20" colspan="2">dame la calificacion de submodulo|||:desarrolla paginas web que se ejecutan en el cliente</td>
+				<td><input type="text" name="txtc3"></td>
+			</tr>
+            
+			<tr>
+				<td height="20" colspan="2">la suma de las calificaciones es: </td>
+				<td><input type="text" name="txtSuma" ></td>
+			</tr>
+            <tr>
+				<td height="20" colspan="2">el Promedio es:</td>
+				<td><input type="text" name="txtPromedio" ></td>
+			</tr>
+            <tr>
+                <td>mensaje</label></td>
+                <td colspan="3"><center><input type="text" name="txtMensaje" ></center></td>
+            </tr>
+			<tr>
+				<td colspan="3" align="center"><input type="button" value="Calcular" onclick="Promedio()"></td>
+			</tr>
+           
+		</form></table>
+	</center>
+</body>
+
+</html>

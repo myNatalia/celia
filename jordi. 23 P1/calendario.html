@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Calendario en Tabla</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        
+        .calendario {
+            position: relative;
+        }
+        
+        .datepicker {
+            width: 100%;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Tabla con Calendario Automático</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Fecha</th>
+                <th>Descripción</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ejemplo 1</td>
+                <td class="calendario" id="celda-fecha"></td>
+                <td>Esta es una descripción de ejemplo</td>
+            </tr>
+            <tr>
+                <td>Ejemplo 2</td>
+                <td>Normal</td>
+                <td>Esta celda no tiene calendario</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Incluir flatpickr desde CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.css">
+
+    <script>
+        // Función que se ejecuta cuando la página termina de cargar
+        document.addEventListener('DOMContentLoaded', function() {
+            // Crear input para el calendario
+            const celdaFecha = document.getElementById('celda-fecha');
+            const inputFecha = document.createElement('input');
+            inputFecha.type = 'text';
+            inputFecha.className = 'datepicker';
+            inputFecha.placeholder = 'Selecciona una fecha';
+            celdaFecha.appendChild(inputFecha);
+            
+            // Inicializar flatpickr (calendario)
+            flatpickr(inputFecha, {
+                dateFormat: 'd/m/Y',
+                defaultDate: 'today',
+                locale: {
+                    firstDayOfWeek: 1, // Lunes como primer día de la semana
+                    weekdays: {
+                        shorthand: ['Do', 'Lu', 'Ma', 'Mi', 'Ju', 'Vi', 'Sa'],
+                        longhand: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado']
+                    },
+                    months: {
+                        shorthand: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
+                        longhand: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']
+                    }
+                },
+                // Abrir automáticamente el calendario al cargar la página
+                open: true
+            });
+        });
+    </script>
+</body>
+</html>

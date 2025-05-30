@@ -1,0 +1,46 @@
+<html>
+<head>
+	<title>
+		Area de un trapecio
+	</title>
+</head>
+<script>
+	function Area(){
+		var B= parseInt(document.formAtrapecio.txtBM.value);
+        var b= parseInt(document.formAtrapecio.txtbm.value);
+        var H= parseInt(document.formAtrapecio.txtH.value);
+		document.formAtrapecio.txtAtrapecio.value=((B+b)/2)*H;
+	}
+</script>
+<center><table width="1000" border="1">
+    <form name="formAtrapecio">
+       
+        
+        <tr>
+            <td><label>ingresa la base mayor</label></td>
+            <td><input type="text" name="txtBM"></td>
+        </tr>
+        <tr>
+            <td><label>ingresa la base menor</label></td>
+            <td><input type="text" name="txtbm"></td>
+        </tr>
+        <tr>
+            <td><label>ingresa la altura</label></td>
+            <td><input type="text" name="txtH"></td>
+        </tr>
+        
+       
+        <tr>
+            <td ><label>el area es:</label></td>
+            <td><input type="text" name="txtAtrapecio"></td>
+        </tr>
+
+        <tr>
+            <td><input type="button" name="area" value="Area de un trapecio" onclick="Area()"></td>
+        </tr>
+    </form></table>
+</center>
+
+</body>
+
+</html>

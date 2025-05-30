@@ -1,0 +1,144 @@
+<html>
+<head>
+	<title>
+		Promedio de un estudiante
+	</title>
+</head>
+<script>
+	function suma(){
+		var C1= parseInt(document.MyForm.txtc1.value);
+		var C2= parseInt(document.MyForm.txtc2.value);
+        var C3= parseInt(document.MyForm.txtc3.value);
+		var C4= parseInt(document.MyForm.txtc4.value);
+        var C5= parseInt(document.MyForm.txtc5.value);
+		var C6= parseInt(document.MyForm.txtc6.value);
+        var C7= parseInt(document.MyForm.txtc7.value);
+		var C8= parseInt(document.MyForm.txtc8.value);
+    	
+		document.MyForm.txtSuma.value=(C1+C2+C3+C4+C5+C6+C7+C8);
+	}
+    function Promedio(){
+		var C1= parseInt(document.MyForm.txtc1.value);
+		var C2= parseInt(document.MyForm.txtc2.value);
+        var C3= parseInt(document.MyForm.txtc3.value);
+		var C4= parseInt(document.MyForm.txtc4.value);
+        var C5= parseInt(document.MyForm.txtc5.value);
+		var C6= parseInt(document.MyForm.txtc6.value);
+        var C7= parseInt(document.MyForm.txtc7.value);
+		var C8= parseInt(document.MyForm.txtc8.value);
+    	
+		document.MyForm.txtPromedio.value=(C1+C2+C3+C4+C5+C6+C7+C8)/8;
+	}
+</script>
+<style>
+        
+		 header {
+           
+            color: rgb(168, 223, 255);
+            padding: 10px;
+            text-align: center;
+            font-family: tahoma, sans-serif;
+            width: 70%;
+        }
+         .interlineado {
+            /* 7. Interlineado */
+            line-height: 1.0;
+        }
+        table{
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table ,td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+        footer {
+            background-color: #ffbeef;
+            color: white;
+            text-align: center;
+            padding: 3px;
+            position: center;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+<body>
+	 <center><header>
+    <img src="Logo.jpg" width="700"><img src="cecytem.png" alt="Bienvenida" width="80" height="80">
+    </header></center>
+
+   
+       
+
+	<center><table width="1000" border="1">
+		<form name="MyForm">
+            <tr>
+                <td colspan="5"><center><font size="10">Promedio de un alumno</font></center></td>
+            </tr>
+            <tr>
+                <td colspan="5"><font face="tahoma">COLEGIO DE ESTUDIOS CIENTIFICOS Y TECNOLOGICOS DEL ESTADO DE MEXICO     
+                plantel Ixtlahuaca
+                elabordo por: Jordi mateo octaviano
+                grupo: 402        N.L: 23           fecha: 31/3/2025</font></td>
+                
+            </tr>
+            <tr>
+                <td colspan="4"><font face="tahoma" size="15">ingresa las siguientes calificaciones</font></td>
+            </tr>
+            <tr>
+                <td rowspan="13"><img src="imaguen.jpg" ></td>
+            </tr>
+			<tr>
+				<td height="20" colspan="2"><label><font face="tahoma" color="pink">dame la calificacion de modulo|||</font></td>
+				<td><input type="text" name="txtc1"></td>
+			</tr>
+            <tr>
+				<td width="200" height="20" colspan="2"><label><font face="tahoma" color="blue">dame la calificacion de submodulo||:desarrolla paginas web que se ejecutan en el servidor</font></label></td>
+				<td width="200" height="20"><input type="text" name="txtc2"></td>
+			</tr>
+            <tr>
+				<td height="20" colspan="2"><label><font face="tahoma" color="red">dame la calificacion de submodulo|||:desarrolla paginas web que se ejecutan en el cliente</font></td>
+				<td><input type="text" name="txtc3"></td>
+			</tr>
+            <tr>
+				<td width="200" height="20" colspan="2"><label><font face="tahoma" color="purple">dame la calificacion de temas selectos de matematicas</font></label></td>
+				<td width="200" height="20"><input type="text" name="txtc4"></td>
+			</tr>
+            <tr>
+				<td height="20" colspan="2"><label><font face="tahoma" color="green">dame la calificacion de conciencia historica</font></td>
+				<td><input type="text" name="txtc5"></td>
+			</tr>
+            <tr>
+				<td width="200" height="20" colspan="2"><label><font face="tahoma" color="cian">dame la calificacion de ingle IV</font></label></td>
+				<td width="200" height="20"><input type="text" name="txtc6"></td>
+			</tr>
+            <tr>
+				<td height="20" colspan="2"><label><font face="tahoma" color="yellow">dame la calificacion de tipos de reacciones quimicas</font></td>
+				<td><input type="text" name="txtc7"></td>
+			</tr>
+            <tr>
+				<td width="200" height="20" colspan="2"><label><font face="tahoma" color="#ffbeef">dame la calificacion de ciencias sociales</font></label></td>
+				<td width="200" height="20"><input type="text" name="txtc8"></td>
+			</tr>
+			<tr>
+				<td height="20" colspan="2"><label><font face="tahoma">la suma de las calificaciones es: </font></td>
+				<td><input type="text" name="txtSuma"></td>
+			</tr>
+            <tr>
+				<td height="20" colspan="2"><label><font face="tahoma">el Promedio es:</font></td>
+				<td><input type="text" name="txtPromedio"></td>
+			</tr>
+
+			<tr>
+				<td colspan="3" align="center"><input type="button" value="suma" onclick="suma(); Promedio()"></td>
+			</tr>
+		</form></table>
+	</center>
+	<center><footer>
+        <p>&copy; 2025 Mi Página Web-todos los derechos reservados</p> 
+        <p>&copy; 👍Mateo Jordi en facebook👍</p>
+        <p>&copy;👍 jrd_ntla en instagram👍</p>   
+    </footer></center>
+</body>
+
+</html>

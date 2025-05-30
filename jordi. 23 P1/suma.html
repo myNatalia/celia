@@ -1,0 +1,75 @@
+
+<html>
+<head>
+	<title>
+		Suma de dos numeros
+	</title>
+</head>
+<script>
+	function sumar(){
+		var n1= parseInt(document.MyForm.txtNumero1.value);
+		var n2= parseInt(document.MyForm.txtNumero2.value);
+		
+		document.MyForm.txtResultado.value=n1+n2;
+	}
+	function restar(){
+		var n1= parseInt(document.MyForm.txtNumero1.value);
+		var n2= parseInt(document.MyForm.txtNumero2.value);
+		document.MyForm.txtRestar.value=n1-n2;
+	}
+	function dividir(){
+		var n1= parseInt(document.MyForm.txtNumero1.value);
+		var n2= parseInt(document.MyForm.txtNumero2.value);
+		document.MyForm.txtDividir.value=n1/n2;
+	}
+	function mltiplicar(){
+		var n1= parseInt(document.MyForm.txtNumero1.value);
+		var n2= parseInt(document.MyForm.txtNumero2.value);
+		document.MyForm.txtMultiplicar.value=n1*n2;
+	}
+</script>
+<body>
+	<center><table width="1000" border="1">
+		<form name="MyForm">
+			<tr>
+				<td width="200"><label>dame el primer numero</label></td>
+				<td width="200"><input type="text" name="txtNumero1"></td>
+				<td width="200" rowspan="4"><img src="Suma.pg"></td>
+			</tr>
+			<tr>
+				<td><label>dame el segundo numero</td>
+				<td><input type="text" name="txtNumero2"></td>
+			</tr>
+			<tr>
+				<td><label>mostrar resultado</td>
+				<td><input type="text" name="txtResultado"></td>
+			</tr>
+			<tr>
+				<td><label>mostrar resultado</td>
+				<td><input type="text" name="txtRestar"></td>
+			</tr>
+			<tr>
+				<td><label>mostrar resultado</td>
+				<td><input type="text" name="txtDividir"></td>
+			</tr>
+			<tr>
+				<td><label>mostrar resultado</td>
+				<td><input type="text" name="txtMultiplicar"></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center"><input type="button" value="Suma" onclick="sumar()"></td>
+			</tr>
+				<td colspan="2" align="center"><input type="button" value="Restar" onclick="restar()"></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center"><input type="button" value="Dividir" onclick="dividir()"></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center"><input type="button" value="Multiplicar" onclick="mltiplicar()"></td>
+			</tr>
+
+				</form></table>
+	</center>
+</body>
+
+</html>
